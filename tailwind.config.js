@@ -1,4 +1,4 @@
-const { createThemes } = require('./node_modules/tw-colors');
+const { createThemes } = require('tw-colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
       createThemes({
         light: { 
            'primary': 'yellow',
-           'secondary': 'black',
+           'secondary': 'grey',
         },
         medium: { 
            'primary': 'red',
@@ -31,6 +31,6 @@ module.exports = {
            'secondary': 'yellow',
         },
       })
-    ],
-  },
+    ]
+  }
 }
