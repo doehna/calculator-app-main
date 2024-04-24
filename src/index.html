@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
   <meta charset="UTF-8">
@@ -12,11 +12,41 @@
     @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
   </style>
 
+  <script type="script" src="js/code.js"></script>
   <title>Calculator</title>
 </head>
 
-<body class="light">
-  <div class="text-secondary font-league-spartan">Font Test gy</div>
+<body class="flex bg-main-bg h-screen flex-row justify-center items-center font-league-spartan text-standard">
+  <main class="flex flex-col justify-around gap-5 h-100 w-90 min-w-300p max-w-450p">
+    <div class="flex bg-main-bg h-16 flex-row justify-between items-center text-header">
+      <header class="text-3xl font-semibold">calc</header>
+      <div class="flex justify-between items-center gap-4 cursor-pointer">
+        <span class="text-xs font-semibold">THEME</span>
+        <div class="flex flex-row gap-2">
+          <div class="flex flex-col items-center">
+            <label for="medium">1</label>
+            <input type="radio" id="medium" name="theme" value="medium">
+          </div>
+          <div class="flex flex-col items-center">
+            <label for="light">2</label>
+            <input type="radio" id="light" name="theme" value="light">
+          </div>
+          <div class="flex flex-col items-center">
+            <label for="dark">3</label>
+            <input type="radio" id="dark" name="theme" value="dark">
+          </div>
+        </div>
+        <!-- <div class="relative w-60p h-6 bg-toggle-bg peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-key-bg-toggle after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-key-bg-toggle after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div> -->
+      </div>
+    </div>
+    <div class="bg-screen-bg h-110p rounded-xl text-header">
+
+    </div>
+    <div class="bg-toggle-bg h-80 rounded-xl">
+
+    </div>
+
+  </main>
 </body>
 
 </html>
