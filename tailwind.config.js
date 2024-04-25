@@ -9,6 +9,8 @@ module.exports = {
     extend: {
       width: {
         '60p': '60px',
+        '25': '25%',
+        '50': '50%',
         '90': '90%'
       },
       minWidth: {
@@ -18,9 +20,11 @@ module.exports = {
         '450p': '450px'
       },
       height: {
+        '24p': '24px',
         '60p': '60px',
         '110p': '110px',
-        '400p': '400px'
+        '400p': '400px',
+        '50': '50%'
       },
       fontFamily: {
         "league-spartan": ['"League Spartan"', 'sans-serif']

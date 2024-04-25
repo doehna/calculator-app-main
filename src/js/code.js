@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let radioButtons = document.querySelectorAll('input[name="theme"]');
 
     for (radioButton of radioButtons) {
-        radioButton.addEventListener('click', function (e) { 
+        radioButton.addEventListener('click', function (e) {
             ChangeColorTheme(this.id);
         });
         SetFirstRadioButtonValue(radioButton, theme);
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 function SetFirstRadioButtonValue(radioButton, theme) {
-    if(radioButton.value === theme) {
+    if (radioButton.value === theme) {
         radioButton.checked = true;
     }
 }
@@ -32,11 +32,11 @@ function SetDefaultColorTheme() {
     }
     else {
         let browsertTheme = MatchThemeWithBrowserPreferences('light');
-        if(browsertTheme) {
+        if (browsertTheme) {
             return browsertTheme;
         }
         browsertTheme = MatchThemeWithBrowserPreferences('dark');
-        if(browsertTheme) {
+        if (browsertTheme) {
             return browsertTheme;
         }
     }
