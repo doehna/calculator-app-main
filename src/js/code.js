@@ -6,14 +6,31 @@ document.addEventListener('DOMContentLoaded', function () {
     for (radioButton of radioButtons) {
         radioButton.addEventListener('click', function (e) {
             ChangeColorTheme(this.id);
+            SetTogglePositionByTheme(this.id);
         });
         SetFirstRadioButtonValue(radioButton, theme);
     }
 })
 
+function SetTogglePositionByTheme(theme) {
+    let toggleHandle = document.querySelector('.toggle-handle-js');
+    switch(theme) {
+        case 'medium':
+            toggleHandle.style.transform = 'translateX(0%)';
+            break;
+        case 'light':
+            toggleHandle.style.transform = 'translateX(100%)';
+            break;
+        case 'dark':
+            toggleHandle.style.transform = 'translateX(200%)';
+            break;
+    }
+}
+
 function SetFirstRadioButtonValue(radioButton, theme) {
     if (radioButton.value === theme) {
         radioButton.checked = true;
+        SetTogglePositionByTheme(radioButton.value);
     }
 }
 

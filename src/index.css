@@ -2,20 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.toggle-switch .toggle-handle {
-  transition: transform 0.3s ease;
-}
-
-#medium:checked ~ .toggle-handle {
-  transform: translateX(0%);
-}
-
-#light:checked ~ .toggle-handle {
-  transform: translateX(100%);
-}
-
-#dark:checked ~ .toggle-handle {
-  transform: translateX(200%);
-}
-
