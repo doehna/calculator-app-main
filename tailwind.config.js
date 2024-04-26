@@ -45,7 +45,7 @@ module.exports = {
         'key-shd-special': 'hsl(224, 28%, 35%)',
         'key-bg-toggle': 'hsl(6, 63%, 50%)',
         'key-shd-toggle': 'hsl(6, 70%, 34%)',
-        'key-bg-standard': 'hsl(30, 25%, 89%',
+        'key-bg-standard': 'hsl(30, 25%, 89%)',
         'key-shd-standard': 'hsl(28, 16%, 65%)',
         
         //Text
