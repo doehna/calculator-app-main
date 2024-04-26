@@ -17,24 +17,24 @@
 </head>
 
 <body class="flex bg-main-bg h-screen flex-row justify-center items-center font-league-spartan text-standard">
-  <main class="flex flex-col justify-around gap-7 h-100 w-90 min-w-300p max-w-450p">
+  <main class="flex flex-col justify-around gap-6 w-[90%] min-w-[300px] max-w-[450px]">
     <section class="flex bg-main-bg h-16 flex-row justify-between items-end text-header">
-      <header class="text-3xl font-semibold">calc</header>
-      <div class="w-25 h-full grid grid-cols-2 grid-rows-2">
+      <header class="text-[28px] font-bold">calc</header>
+      <div class="w-[25%] h-full grid grid-cols-2 grid-rows-2">
         <div></div>
-        <div class="flex justify-between items-end">
+        <div class="flex justify-around items-end text-[10px] font-bold">
           <label for="medium" class="toggle-label">1</label>
           <label for="light" class="toggle-label">2</label>
           <label for="dark" class="toggle-label">3</label>
         </div>
         <div>
-          <span class="text-xs font-semibold">THEME</span>
+          <span class="text-[11px] tracking-widest font-bold">THEME</span>
         </div>
-        <div>
-          <div class="relative flex justify-between bg-toggle-bg h-24p rounded-xl w-full">
-            <input type="radio" id="medium" name="theme" value="medium" class="hidden">
-            <input type="radio" id="light" name="theme" value="light" class="hidden">
-            <input type="radio" id="dark" name="theme" value="dark" class="hidden">
+        <div class="">
+          <div class="relative flex justify-between bg-toggle-bg h-[24px] rounded-xl w-full cursor-pointer">
+            <input type="radio" id="medium" name="theme" value="medium" class="opacity-0 cursor-pointer">
+            <input type="radio" id="light" name="theme" value="light" class="opacity-0 cursor-pointer">
+            <input type="radio" id="dark" name="theme" value="dark" class="opacity-0 cursor-pointer">
             <div
               class="toggle-handle absolute bottom-0 left-0 bg-key-bg-toggle h-4 w-4 rounded-full m-1 border-key-shd-toggle border">
             </div>
@@ -42,10 +42,10 @@
         </div>
       </div>
     </section>
-    <section class="bg-screen-bg h-110p rounded-xl text-header">
+    <section class="bg-screen-bg h-[110px] rounded-xl text-header">
 
     </section>
-    <section class="bg-toggle-bg h-80 rounded-xl">
+    <section class="bg-toggle-bg h-[400px] rounded-xl">
 
     </section>
 

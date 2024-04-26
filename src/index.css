@@ -3,19 +3,6 @@
 @tailwind utilities;
 
 
-.toggle-switch {
-  position: relative;
-}
-
-input.hidden {
-  position: absolute;
-  z-index: -1;
-}
-
-.toggle-switch .toggle-label {
-  cursor: pointer;
-}
-
 .toggle-switch .toggle-handle {
   transition: transform 0.3s ease;
 }
