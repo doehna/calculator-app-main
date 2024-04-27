@@ -99,7 +99,7 @@ function $60eafcd7eea799ef$var$AddDeleteButtonEventListener(screen) {
 function $60eafcd7eea799ef$var$AddRadioButtonsClickListeners() {
     let theme = $60eafcd7eea799ef$var$SetDefaultColorTheme();
     let radioButtons = document.querySelectorAll('input[name="theme"]');
-    for (radioButton of radioButtons){
+    for (const radioButton of radioButtons){
         radioButton.addEventListener("click", function() {
             $60eafcd7eea799ef$var$ChangeColorTheme(this.id);
             $60eafcd7eea799ef$var$SetTogglePositionByTheme(this.id);
@@ -121,10 +121,10 @@ function $60eafcd7eea799ef$var$SetTogglePositionByTheme(theme) {
             break;
     }
 }
-function $60eafcd7eea799ef$var$SetFirstRadioButtonValue(radioButton1, theme) {
-    if (radioButton1.value === theme) {
-        radioButton1.checked = true;
-        $60eafcd7eea799ef$var$SetTogglePositionByTheme(radioButton1.value);
+function $60eafcd7eea799ef$var$SetFirstRadioButtonValue(radioButton, theme) {
+    if (radioButton.value === theme) {
+        radioButton.checked = true;
+        $60eafcd7eea799ef$var$SetTogglePositionByTheme(radioButton.value);
     }
 }
 function $60eafcd7eea799ef$var$ChangeColorTheme(theme) {
@@ -159,4 +159,4 @@ function $60eafcd7eea799ef$var$SaveThemeInLocalStorage(theme) {
 }
 
 
-//# sourceMappingURL=index.b9af0e58.js.map
+//# sourceMappingURL=index.022be41f.js.map
