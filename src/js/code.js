@@ -58,7 +58,12 @@ function CalculateResult(screen) {
                 result = result * value;
                 break;
             case '/':
-                result = result / value;
+                if (value !== 0) {
+                    result = result / value;
+                }
+                else {
+                    result = 'NOT A NUMBER'
+                }
                 break;
             default:
                 break;
@@ -70,7 +75,11 @@ function CalculateResult(screen) {
 
     localStorage.setItem('isSubmitted', 'true');
     localStorage.setItem('result', result);
-    screen.innerHTML = round(result, 12);
+    screen.innerHTML = CountNumberOfIntegerDigits(result) > 12 ? result.toExponential(7) : result;
+}
+
+function CountNumberOfIntegerDigits(number) {
+    return number.toString().length;
 }
 
 function AddButtonsEventListener(screen) {
@@ -195,8 +204,4 @@ function MatchThemeWithBrowserPreferences(theme) {
 function SaveThemeInLocalStorage(theme) {
     localStorage.setItem('theme', theme);
     return theme;
-}
-
-function IsNullOrEmpty(text) {
-    return text === null || text === '';
 }
