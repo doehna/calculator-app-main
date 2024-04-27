@@ -12,7 +12,7 @@
     @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
   </style>
 
-  <script type="script" src="js/code.js"></script>
+  <script type="module" src="js/code.js"></script>
   <title>Calculator</title>
 </head>
 
@@ -31,37 +31,57 @@
           <span class="text-[11px] tracking-widest font-bold">THEME</span>
         </div>
         <div>
-          <div class="relative flex justify-between bg-toggle-bg h-[24px] rounded-xl w-full cursor-pointer">
-            <input type="radio" id="medium" name="theme" value="medium" class="opacity-0 cursor-pointer">
-            <input type="radio" id="light" name="theme" value="light" class="opacity-0 cursor-pointer">
-            <input type="radio" id="dark" name="theme" value="dark" class="opacity-0 cursor-pointer">
-            <div class="toggle-handle-js hover:brightness-150 transition transform ease-out absolute bottom-0 left-0 bg-key-bg-toggle h-4 w-4 rounded-full m-1 border-key-shd-toggle border">
+          <div class="relative flex justify-around bg-toggle-bg h-[24px] rounded-xl w-full cursor-pointer">
+            <input type="radio" id="medium" name="theme" value="medium" class="opacity-0 cursor-pointer scale-[1.5]">
+            <input type="radio" id="light" name="theme" value="light" class="opacity-0 cursor-pointer scale-[1.5]">
+            <input type="radio" id="dark" name="theme" value="dark" class="opacity-0 cursor-pointer scale-[1.5]">
+            <div
+              class="toggle-handle-js hover:brightness-150 transition transform ease-out absolute bottom-0 left-0 bg-key-bg-toggle h-4 w-4 rounded-full m-1 border-key-shd-toggle border">
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="bg-screen-bg h-[110px] rounded-xl text-header">
+    <section
+      class="screen-js bg-screen-bg px-[34px] h-[110px] rounded-xl text-header flex justify-end items-center text-[52px] font-bold pt-[7px] overflow-hidden">
     </section>
     <section class="bg-toggle-bg h-[400px] rounded-xl grid grid-cols-4 grid-rows-5 gap-[25px] p-[25px] ">
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">7</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">8</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">9</button>
-      <button class="hover:brightness-150 pt-[7px] bg-key-bg-special border-b-[3px] border-b-key-shd-special rounded-lg text-[24px] font-semibold text-white">DEL</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">4</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">5</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">6</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">+</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">1</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">2</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">3</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">-</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">.</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">0</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">/</button>
-      <button class="hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">x</button>
-      <button class="hover:brightness-150 pt-[7px] col-span-2 bg-key-bg-special border-b-[3px] border-b-key-shd-special rounded-lg text-[24px] font-semibold text-white">RESET</button>
-      <button class="hover:brightness-150 pt-[5px] col-span-2 bg-key-bg-toggle border-b-[3px] border-b-key-shd-toggle rounded-lg text-[24px] font-semibold text-equal">=</button>
+      <button
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">7</button>
+      <button
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">8</button>
+      <button
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">9</button>
+      <button
+        class="del-button-js hover:brightness-150 pt-[7px] bg-key-bg-special border-b-[3px] border-b-key-shd-special rounded-lg text-[24px] font-semibold text-white">DEL</button>
+      <button
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">4</button>
+      <button
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">5</button>
+      <button
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">6</button>
+      <button
+        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">+</button>
+      <button
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">1</button>
+      <button
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">2</button>
+      <button
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">3</button>
+      <button
+        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">-</button>
+      <button
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">.</button>
+      <button
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">0</button>
+      <button
+        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">/</button>
+      <button
+        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">x</button>
+      <button
+        class="reset-button-js hover:brightness-150 pt-[7px] col-span-2 bg-key-bg-special border-b-[3px] border-b-key-shd-special rounded-lg text-[24px] font-semibold text-white">RESET</button>
+      <button
+        class="equal-button-js hover:brightness-150 pt-[5px] col-span-2 bg-key-bg-toggle border-b-[3px] border-b-key-shd-toggle rounded-lg text-[24px] font-semibold text-equal">=</button>
     </section>
 
   </main>
