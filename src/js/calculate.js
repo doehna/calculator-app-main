@@ -28,12 +28,7 @@ function performOperation(action, result, value) {
             result = result * value;
             break;
         case '/':
-            if (value !== 0) {
-                result = result / value;
-            }
-            else {
-                result = 'NOT A NUMBER'
-            }
+            result = value !== 0 ? result / value : 'NOT A NUMBER';
             break;
         default:
             break;
