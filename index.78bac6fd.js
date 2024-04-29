@@ -109,6 +109,8 @@ function $60eafcd7eea799ef$var$AddRadioButtonsClickListeners() {
 }
 function $60eafcd7eea799ef$var$SetTogglePositionByTheme(theme) {
     let toggleHandle = document.querySelector(".toggle-handle-js");
+    let width = toggleHandle.parentElement.clientWidth;
+    console.log(width);
     switch(theme){
         case "medium":
             toggleHandle.style.transform = "translateX(0%)";
@@ -159,4 +161,4 @@ function $60eafcd7eea799ef$var$SaveThemeInLocalStorage(theme) {
 }
 
 
-//# sourceMappingURL=index.022be41f.js.map
+//# sourceMappingURL=index.78bac6fd.js.map
