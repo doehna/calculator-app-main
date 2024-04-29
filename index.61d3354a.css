@@ -398,14 +398,6 @@ img, video {
   gap: 1.5rem;
 }
 
-.gap-\[25px\] {
-  gap: 25px;
-}
-
-.gap-\[20px\] {
-  gap: 20px;
-}
-
 .gap-\[15px\] {
   gap: 15px;
 }
@@ -525,18 +517,6 @@ img, video {
   font-size: 32px;
 }
 
-.text-\[52px\] {
-  font-size: 52px;
-}
-
-.text-\[44px\] {
-  font-size: 44px;
-}
-
-.text-\[40px\] {
-  font-size: 40px;
-}
-
 .text-\[36px\] {
   font-size: 36px;
 }
@@ -650,28 +630,12 @@ img, video {
     width: 30%;
   }
 
-  .xs\:gap-\[\] {
-    gap: ;
-  }
-
   .xs\:gap-\[20px\] {
     gap: 20px;
   }
 
-  .xs\:text-\[48px\] {
-    font-size: 48px;
-  }
-
-  .xs\:text-\[46px\] {
-    font-size: 46px;
-  }
-
   .xs\:text-\[44px\] {
     font-size: 44px;
-  }
-
-  .xs\:text-\[\] {
-    color: ;
   }
 }
 
@@ -682,10 +646,6 @@ img, video {
 
   .sm\:text-\[52px\] {
     font-size: 52px;
-  }
-
-  .sm\:text-\[\] {
-    color: ;
   }
 }
 /*# sourceMappingURL=index.61d3354a.css.map */
