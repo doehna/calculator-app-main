@@ -1,24 +1,18 @@
-import {
-    getActionFromLocalStorage, 
-    getIsSubmittedFromLocalStorage, 
-    getResultFromLocalStorage, 
-    setIsSubmittedInLocalStorage, 
-    setResultInLocalStorage
-} from  "./localStorage";
+import * as localStorage from  "./localStorage";
 
 function calculateResult(screen) {
     // in case action button was clicked without changing the value
-    let hasChanged = getIsSubmittedFromLocalStorage() === 'false';
+    let hasChanged = localStorage.getIsSubmitted() === 'false';
 
-    let result = parseFloat(getResultFromLocalStorage());
-    let action = getActionFromLocalStorage();
+    let result = parseFloat(localStorage.getResult());
+    let action = localStorage.getAction();
     let value = parseFloat(screen.innerHTML);
 
     value = isNaN(value) ? 0 : value;
     result = !isNaN(result) && hasChanged ? performOperation(action, result, value) : value;
 
-    setIsSubmittedInLocalStorage('true');
-    setResultInLocalStorage(result);
+    localStorage.setIsSubmitted('true');
+    localStorage.setResult(result);
     screen.innerHTML = countNumberOfIntegerDigits(result) > 12 ? result.toExponential(7) : result;
 }
 

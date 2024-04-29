@@ -1,6 +1,6 @@
-import { setThemeInLocalStorage, getThemeFromLocalStorage } from './localStorage'
+import * as localStorage from './localStorage'
 
-function setTogglePositionByTheme(theme) {
+function setTogglePosition(theme) {
     let toggleHandle = document.querySelector('.toggle-handle-js');
 
     switch (theme) {
@@ -16,47 +16,47 @@ function setTogglePositionByTheme(theme) {
     }
 }
 
-function matchRadioButtonValueWithTheme(theme) {
+function matchRadioButtonValue(theme) {
     let radioButtons = document.querySelectorAll('input[name="theme"]');
 
     for (const radioButton of radioButtons) {
         if (radioButton.value === theme) {
             radioButton.checked = true;
-            setTogglePositionByTheme(radioButton.value);
+            setTogglePosition(radioButton.value);
         }
     }
 }
 
-function changeColorTheme(theme) {
+function changeColor(theme) {
     const html = document.querySelector('html');
     html.classList.remove(html.classList.value);
     html.classList.add(theme);
-    setThemeInLocalStorage(theme);
+    localStorage.setTheme(theme);
 }
 
-function setDefaultColorTheme() {
-    const defaultTheme = getThemeFromLocalStorage();
+function setDefaultColor() {
+    const defaultTheme = localStorage.getTheme();
     let theme;
     if (defaultTheme) {
-        changeColorTheme(defaultTheme);
+        changeColor(defaultTheme);
         theme = defaultTheme;
     }
     else {
-        let browsertThemeLight = matchThemeWithBrowserPreferences('light');
-        let browsertThemeDark = matchThemeWithBrowserPreferences('dark');
+        let browsertThemeLight = matchBrowserPreferences('light');
+        let browsertThemeDark = matchBrowserPreferences('dark');
         theme = browsertThemeLight ?? browsertThemeDark ?? 'medium';
     }
-    matchRadioButtonValueWithTheme(theme);
+    matchRadioButtonValue(theme);
     return theme;
 }
 
-function matchThemeWithBrowserPreferences(theme) {
+function matchBrowserPreferences(theme) {
     if (window.matchMedia && window.matchMedia(`(prefers-color-scheme: ${theme})`).matches) {
-        changeColorTheme(theme);
-        setThemeInLocalStorage(theme);
+        changeColor(theme);
+        localStorage.setTheme(theme);
         return theme;
     }
     return null;
 }
 
-export { setDefaultColorTheme, matchRadioButtonValueWithTheme, setTogglePositionByTheme, changeColorTheme }
+export { setDefaultColor, matchRadioButtonValue, setTogglePosition, changeColor }

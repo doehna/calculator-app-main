@@ -1,13 +1,13 @@
-import { calculateResult } from "./calculation";
-import { resetLocalStorage, setActionInLocalStorage } from "./localStorage";
-import { setDefaultColorTheme, setTogglePositionByTheme, changeColorTheme } from './themeHelper'
-import { addCharacterToScreen } from "./screen";
+import { calculateResult } from "./calculate";
+import * as localStorage from "./localStorage";
+import * as theme from './theme'
+import * as calcScreen from "./screen";
 
 //var radioButtonValue = document.querySelectorAll('input[name="theme"]:checked').value;
 document.addEventListener('DOMContentLoaded', function () {
     let screen = document.querySelector('.screen-js');
-    resetLocalStorage();
-    setDefaultColorTheme();
+    localStorage.clear();
+    theme.setDefaultColor();
 
     addRadioButtonsClickListeners();
     addButtonsEventListener(screen);
@@ -22,7 +22,7 @@ function addEqualButtonEventListener(screen) {
 
     equalButton.addEventListener('click', function () {
         calculateResult(screen);
-        resetLocalStorage();
+        localStorage.clear();
     })
 }
 
@@ -31,7 +31,7 @@ function addActionButtonsEventListeners(screen) {
     for (const button of buttons) {
         button.addEventListener('click', function (e) {
             calculateResult(screen);
-            setActionInLocalStorage(e.target.textContent);
+            localStorage.setAction(e.target.textContent);
         })
     }
 }
@@ -40,7 +40,7 @@ function addButtonsEventListener(screen) {
     let buttons = document.querySelectorAll('.button-js');
     for (const button of buttons) {
         button.addEventListener('click', function () {
-            addCharacterToScreen(screen, button);
+            calcScreen.addCharacter(screen, button);
         })
     }
 }
@@ -49,7 +49,7 @@ function addResetButtonEventListener(screen) {
     let resetButton = document.querySelector('.reset-button-js');
 
     resetButton.addEventListener('click', function () {
-        resetLocalStorage();
+        localStorage.clear();
         screen.innerHTML = '';
     })
 }
@@ -59,6 +59,7 @@ function addDeleteButtonEventListener(screen) {
 
     resetButton.addEventListener('click', function () {
         screen.innerHTML = screen.innerHTML.slice(0, -1);
+        localStorage.setIsSubmitted('false');
     })
 }
 
@@ -67,8 +68,8 @@ function addRadioButtonsClickListeners() {
 
     for (const radioButton of radioButtons) {
         radioButton.addEventListener('click', function () {
-            changeColorTheme(this.id);
-            setTogglePositionByTheme(this.id);
+            theme.changeColor(this.id);
+            theme.setTogglePosition(this.id);
         });
     }
 }

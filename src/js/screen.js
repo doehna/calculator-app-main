@@ -1,12 +1,12 @@
-import { getIsSubmittedFromLocalStorage, setIsSubmittedInLocalStorage} from './localStorage'
+import * as localStorage from './localStorage'
 
-function addCharacterToScreen(screen, button) {
+function addCharacter(screen, button) {
     let value = screen.innerHTML.trim();
-    let isSubmitted = getIsSubmittedFromLocalStorage() === 'true';
+    let isSubmitted = localStorage.getIsSubmitted() === 'true';
 
     if (isSubmitted) {
         screen.innerHTML = button.textContent;
-        setIsSubmittedInLocalStorage('false');
+        localStorage.setIsSubmitted('false');
     }
     else {
         let isShorterThen8Char = value.length < 8;
@@ -18,4 +18,4 @@ function addCharacterToScreen(screen, button) {
     }
 }
 
-export { addCharacterToScreen }
+export { addCharacter }
