@@ -346,12 +346,12 @@ img, video {
   cursor: pointer;
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-\[auto_56px\] {
+  grid-template-columns: auto 56px;
 }
 
 .grid-rows-2 {
@@ -398,8 +398,8 @@ img, video {
   gap: 1.5rem;
 }
 
-.gap-\[25px\] {
-  gap: 25px;
+.gap-\[15px\] {
+  gap: 15px;
 }
 
 .overflow-hidden {
@@ -517,8 +517,8 @@ img, video {
   font-size: 32px;
 }
 
-.text-\[52px\] {
-  font-size: 52px;
+.text-\[36px\] {
+  font-size: 36px;
 }
 
 .font-bold {
@@ -625,9 +625,27 @@ img, video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-@media (width >= 768px) {
-  .md\:w-\[25\%\] {
-    width: 25%;
+@media (width >= 400px) {
+  .xs\:w-\[30\%\] {
+    width: 30%;
+  }
+
+  .xs\:gap-\[20px\] {
+    gap: 20px;
+  }
+
+  .xs\:text-\[44px\] {
+    font-size: 44px;
   }
 }
-/*# sourceMappingURL=index.ab5c7d82.css.map */
+
+@media (width >= 500px) {
+  .sm\:w-\[25\%\] {
+    width: 25%;
+  }
+
+  .sm\:text-\[52px\] {
+    font-size: 52px;
+  }
+}
+/*# sourceMappingURL=index.85e4e414.css.map */
