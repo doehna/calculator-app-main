@@ -136,7 +136,7 @@ function AddRadioButtonsClickListeners() {
     let theme = SetDefaultColorTheme();
     let radioButtons = document.querySelectorAll('input[name="theme"]');
 
-    for (radioButton of radioButtons) {
+    for (const radioButton of radioButtons) {
         radioButton.addEventListener('click', function () {
             ChangeColorTheme(this.id);
             SetTogglePositionByTheme(this.id);
@@ -147,6 +147,9 @@ function AddRadioButtonsClickListeners() {
 
 function SetTogglePositionByTheme(theme) {
     let toggleHandle = document.querySelector('.toggle-handle-js');
+
+    let width = toggleHandle.parentElement.clientWidth;
+    console.log(width);
     switch (theme) {
         case 'medium':
             toggleHandle.style.transform = 'translateX(0%)';

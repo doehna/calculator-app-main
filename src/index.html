@@ -20,7 +20,7 @@
   <main class="flex flex-col justify-around gap-6 w-[90%] min-w-[300px] max-w-[450px]">
     <section class="flex bg-main-bg h-16 flex-row justify-between items-end text-header">
       <header class="text-[28px] font-bold">calc</header>
-      <div class="w-[25%] h-full grid grid-cols-2 grid-rows-2">
+      <div class="w-[35%] xs:w-[30%] sm:w-[25%] h-full grid grid-cols-[auto_56px] grid-rows-2">
         <div></div>
         <div class="flex justify-around items-end text-[10px] font-bold">
           <label for="medium" class="toggle-label">1</label>
@@ -30,14 +30,12 @@
         <div>
           <span class="text-[11px] tracking-widest font-bold">THEME</span>
         </div>
-        <div>
-          <div class="relative flex justify-around bg-toggle-bg h-[24px] rounded-xl w-full cursor-pointer">
-            <input type="radio" id="medium" name="theme" value="medium" class="opacity-0 cursor-pointer scale-[1.5]">
-            <input type="radio" id="light" name="theme" value="light" class="opacity-0 cursor-pointer scale-[1.5]">
-            <input type="radio" id="dark" name="theme" value="dark" class="opacity-0 cursor-pointer scale-[1.5]">
-            <div
-              class="toggle-handle-js hover:brightness-150 transition transform ease-out absolute bottom-0 left-0 bg-key-bg-toggle h-4 w-4 rounded-full m-1 border-key-shd-toggle border">
-            </div>
+        <div class="relative flex justify-around bg-toggle-bg h-[24px] rounded-xl w-full cursor-pointer">
+          <input type="radio" id="medium" name="theme" value="medium" class="opacity-0 cursor-pointer scale-[1.5]">
+          <input type="radio" id="light" name="theme" value="light" class="opacity-0 cursor-pointer scale-[1.5]">
+          <input type="radio" id="dark" name="theme" value="dark" class="opacity-0 cursor-pointer scale-[1.5]">
+          <div
+            class="toggle-handle-js hover:brightness-150 transition transform ease-out absolute bottom-0 left-0 bg-key-bg-toggle h-4 w-4 rounded-full m-1 border-key-shd-toggle border">
           </div>
         </div>
       </div>
@@ -45,7 +43,7 @@
     <section
       class="screen-js bg-screen-bg px-[34px] h-[110px] rounded-xl text-header flex justify-end items-center text-[52px] font-bold pt-[7px] overflow-hidden">
     </section>
-    <section class="bg-toggle-bg h-[400px] rounded-xl grid grid-cols-4 grid-rows-5 gap-[25px] p-[25px] ">
+    <section class="bg-toggle-bg h-[400px] rounded-xl grid grid-cols-4 grid-rows-5 gap-[15px] xs:gap-[20px] p-[25px] ">
       <button
         class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">7</button>
       <button

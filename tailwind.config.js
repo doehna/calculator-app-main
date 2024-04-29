@@ -6,6 +6,10 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'xs': '400px',
+      'sm': '500px',
+    },
     extend: {
       fontFamily: {
         "league-spartan": ['"League Spartan"', 'sans-serif']
