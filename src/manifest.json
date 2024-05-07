@@ -1,12 +1,12 @@
 {
-  "name": "calculator app main",
+  "name": "calculator",
   "short_name": "calculator",
   "theme_color": "#fff",
   "background_color": "#fff",
   "display": "fullScreen",
   "orientation": "portrait",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/calculator-app-main/",
+  "start_url": "/calculator-app-main/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
