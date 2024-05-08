@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simple calculator">
+  <meta property="og:title" content="Calculator">
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -36,7 +38,7 @@
           <input type="radio" id="light" name="theme" value="light" class="opacity-0 cursor-pointer scale-[1.5]">
           <input type="radio" id="dark" name="theme" value="dark" class="opacity-0 cursor-pointer scale-[1.5]">
           <div
-            class="toggle-handle-js hover:brightness-150 transition transform ease-out absolute bottom-0 left-0 bg-key-bg-toggle h-4 w-4 rounded-full m-1 border-key-shd-toggle border">
+            class="toggle-handle-js hover:brightness-150 transition-all duration-150 ease-in-out absolute bottom-0 left-0 bg-key-bg-toggle h-4 w-4 rounded-full m-1 border-key-shd-toggle border">
           </div>
         </div>
       </div>
@@ -46,41 +48,41 @@
     </section>
     <section class="bg-toggle-bg h-[400px] rounded-xl grid grid-cols-4 grid-rows-5 gap-[15px] xs:gap-[20px] p-[25px] ">
       <button
-        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">7</button>
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">7</button>
       <button
-        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">8</button>
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">8</button>
       <button
-        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">9</button>
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">9</button>
       <button
-        class="del-button-js hover:brightness-150 pt-[7px] bg-key-bg-special border-b-[3px] border-b-key-shd-special rounded-lg text-[24px] font-semibold text-white">DEL</button>
+        class="del-button-js hover:brightness-150 pt-[7px] bg-key-bg-special border-b-[3px] border-b-key-shd-special rounded-lg text-[24px] font-semibold text-white transition-all duration-200 ease-in-out">DEL</button>
       <button
-        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">4</button>
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">4</button>
       <button
-        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">5</button>
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">5</button>
       <button
-        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">6</button>
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">6</button>
       <button
-        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">+</button>
+        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">+</button>
       <button
-        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">1</button>
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">1</button>
       <button
-        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">2</button>
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">2</button>
       <button
-        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">3</button>
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">3</button>
       <button
-        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">-</button>
+        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">-</button>
       <button
-        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">.</button>
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">.</button>
       <button
-        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">0</button>
+        class="button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">0</button>
       <button
-        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">/</button>
+        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">/</button>
       <button
-        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold">x</button>
+        class="action-button-js hover:brightness-125 pt-[5px] bg-key-bg-standard border-b-[3px] border-b-key-shd-standard rounded-lg text-[32px] font-bold transition-all duration-200 ease-in-out">x</button>
       <button
-        class="reset-button-js hover:brightness-150 pt-[7px] col-span-2 bg-key-bg-special border-b-[3px] border-b-key-shd-special rounded-lg text-[24px] font-semibold text-white">RESET</button>
+        class="reset-button-js hover:brightness-150 pt-[7px] col-span-2 bg-key-bg-special border-b-[3px] border-b-key-shd-special rounded-lg text-[24px] font-semibold text-white transition-all duration-200 ease-in-out">RESET</button>
       <button
-        class="equal-button-js hover:brightness-150 pt-[5px] col-span-2 bg-key-bg-toggle border-b-[3px] border-b-key-shd-toggle rounded-lg text-[24px] font-semibold text-equal">=</button>
+        class="equal-button-js hover:brightness-150 pt-[5px] col-span-2 bg-key-bg-toggle border-b-[3px] border-b-key-shd-toggle rounded-lg text-[24px] font-semibold text-equal transition-all duration-200 ease-in-out">=</button>
     </section>
 
   </main>
